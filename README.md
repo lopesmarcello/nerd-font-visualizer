@@ -9,6 +9,8 @@
 
 ### Stop endlessly scrolling cheat sheets. Find the Nerd Font you want, instantly.
 
+![App Screenshot](https://nerd-font-visualizer-git-main-marcello-lopes-projects.vercel.app/screenshot.png)
+
 </div>
 
 ---
