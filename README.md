@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🤓 Nerd Font Visualizer 🔍
 
-First, run the development server:
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://nerd-font-visualizer-five.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Tech Stack: Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Styled with: Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Stop endlessly scrolling cheat sheets. Find the Nerd Font you want, instantly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Live Demo
 
-## Learn More
+Ready to find your next font? Check out the live version, deployed on Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <a href="https://nerd-font-visualizer-five.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/LAUNCH_VISUALIZER-2A475E?style=for-the-badge&logo=rocket&logoColor=white" alt="Launch Visualizer"/>
+  </a>
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+This isn't just another cheat sheet. It's a purpose-built tool to make your workflow faster.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **🎨 Sleek & Modern UI:** A clean, dark-mode interface built with Tailwind CSS that's easy on the eyes.
+- **📱 Fully Responsive:** Search for glyphs on your desktop, tablet, or phone.
+- **💡 Zero Dependencies:** It's a web app. If you have a browser, you're good to go.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤔 Why This Project?
+
+The official [Nerd Fonts](https://www.nerdfonts.com/) website is fantastic, specially if you already know the font you want, but finding a new one can be a chore. The **Nerd Font Visualizer** can help you with a simple nerd font showcase, all available on Google Fonts. This way you can easily check them out and use on your PC, projects, and much more!
+
+---
+
+## 🛠️ Tech Stack
+
+This project was built using a modern, performant web stack.
+
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [Shadcn/ui](https://ui.shadcn.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+---
+
+## 🙏 Acknowledgements
+
+- A huge thank you to the **[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)** and **[Google Fonts](https://fonts.google.com/)**.
+- Built by [Marcello Lopes](https://github.com/lopesmarcello).
+
+<div align="center">
+Made with ❤️ and a lot of icons.
+</div>
