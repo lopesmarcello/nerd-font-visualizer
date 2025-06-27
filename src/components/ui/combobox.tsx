@@ -46,13 +46,11 @@ export function Combobox({ options, value, setValue }: Props) {
             </PopoverTrigger>
             <PopoverContent className="w-[200px] p-0">
                 <Command>
-                    <CommandInput placeholder="Search fonts..." />
                     <CommandList>
-                        <CommandEmpty>No framework found.</CommandEmpty>
                         <CommandGroup>
                             {options.map((option) => (
                                 <CommandItem
-                                    key={option.className}
+                                    key={option.label}
                                     value={option.className}
                                     onSelect={(currentValue) => {
                                         const selectedFont = options.find(item => item.className === currentValue)
