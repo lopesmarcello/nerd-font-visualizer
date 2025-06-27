@@ -51,6 +51,21 @@
     background-position: 100% 50%;
   }
 }
+@keyframes pan-grid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -24px -24px;
+  }
+}
+
+/* 
+  A utility class to apply our slow, linear, infinite animation.
+*/
+.animate-grid {
+  animation: pan-grid 15s linear infinite;
+}
 
 .animate-gradient {
   animation: gradient 8s ease infinite;
