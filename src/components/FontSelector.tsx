@@ -1,6 +1,8 @@
 "use client"
+
 import MacOSTerminal from "@/components/MacOsTerminal";
 import { Combobox } from "@/components/ui/combobox";
+import { NerdFont } from "@/types";
 import {
     Roboto_Mono,
     Inconsolata,
@@ -13,6 +15,7 @@ import {
     Noto_Sans_Mono,
     Courier_Prime,
 } from "next/font/google"
+import Link from "next/link";
 import { useState } from "react";
 
 const robotoMono = Roboto_Mono({
@@ -59,58 +62,91 @@ const courierPrime = Courier_Prime({
 })
 
 export function FontSelector() {
-    const [selectedFontClassName, setSelectedFontClassName] = useState(inconsolata.className)
+    const [selectedFont, setSelectedFont] = useState<NerdFont>({
+        label: "Roboto Mono",
+        className: robotoMono.className,
+        url: "https://fonts.google.com/specimen/Roboto+Mono"
+    })
 
-    const options = [
+    const options: NerdFont[] = [
         {
             label: "Roboto Mono",
-            value: robotoMono.className
+            className: robotoMono.className,
+            url: "https://fonts.google.com/specimen/Roboto+Mono"
         },
         {
             label: "Inconsolata",
-            value: inconsolata.className
+            className: inconsolata.className,
+            url: "https://fonts.google.com/specimen/Inconsolata"
         },
         {
             label: "Source Code Pro",
-            value: sourceCodePro.className
+            className: sourceCodePro.className,
+            url: "https://fonts.google.com/specimen/Source+Code+Pro"
         },
         {
             label: "JetBrains Mono",
-            value: jetBrainsMono.className
+            className: jetBrainsMono.className,
+            url: "https://fonts.google.com/specimen/JetBrains+Mono"
         },
         {
             label: "Anonymous Pro",
-            value: anonymousPro.className
+            className: anonymousPro.className,
+            url: "https://fonts.google.com/specimen/Anonymous+Pro"
         },
         {
             label: "Space Mono",
-            value: spaceMono.className
+            className: spaceMono.className,
+            url: "https://fonts.google.com/specimen/Space+Mono"
         },
         {
             label: "Martian Mono",
-            value: martianMono.className
+            className: martianMono.className,
+            url: "https://fonts.google.com/specimen/Martian+Mono"
         },
         {
             label: "Fira Code",
-            value: firaCode.className
+            className: firaCode.className,
+            url: "https://fonts.google.com/specimen/Fira+Code"
         },
         {
             label: "Noto Sans Mono",
-            value: notoSansMono.className
+            className: notoSansMono.className,
+            url: "https://fonts.google.com/specimen/Noto+Sans+Mono"
         },
         {
             label: "Courier Prime",
-            value: courierPrime.className
+            className: courierPrime.className,
+            url: "https://fonts.google.com/specimen/Courier+Prime"
         },
     ]
-    return (
 
+    return (
         <>
             <div className="w-full flex items-center justify-center gap-4 pt-24">
                 <p className="text-sm text-white/75">Select a font: </p>
-                <Combobox options={options} value={selectedFontClassName} setValue={setSelectedFontClassName} />
+                <Combobox options={options} value={selectedFont} setValue={setSelectedFont} />
             </div>
-            <MacOSTerminal fontClassName={selectedFontClassName} />
+
+            <MacOSTerminal fontClassName={selectedFont.className} />
+
+            <Link
+                className="group relative inline-block text-sm font-medium text-zinc-800 focus:ring-3 focus:outline-hidden my-8"
+                href={selectedFont.url}
+                target="_blank"
+            >
+                <span className="absolute inset-0 border border-current"></span>
+                <span
+                    className="block border border-current bg-white px-12 py-3 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+                >
+                    Check{" "}
+                    <span className="font-bold">
+                        {selectedFont.label}
+                    </span>
+                    {" "}
+                    on Google Fonts
+                </span>
+            </Link>
         </>
     )
 }

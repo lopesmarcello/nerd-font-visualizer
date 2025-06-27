@@ -18,14 +18,12 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
+import { NerdFont } from "@/types"
 
 interface Props {
-    options: {
-        label: string,
-        value: string
-    }[]
-    value: string
-    setValue: React.Dispatch<React.SetStateAction<string>>
+    options: NerdFont[]
+    value: NerdFont
+    setValue: React.Dispatch<React.SetStateAction<NerdFont>>
 }
 
 export function Combobox({ options, value, setValue }: Props) {
@@ -41,7 +39,7 @@ export function Combobox({ options, value, setValue }: Props) {
                     className="w-[200px] justify-between"
                 >
                     {value
-                        ? options.find((option) => option.value === value)?.label
+                        ? options.find((option) => option.className === value.className)?.label
                         : "Select a font..."}
                     <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
@@ -54,17 +52,20 @@ export function Combobox({ options, value, setValue }: Props) {
                         <CommandGroup>
                             {options.map((option) => (
                                 <CommandItem
-                                    key={option.value}
-                                    value={option.value}
+                                    key={option.className}
+                                    value={option.className}
                                     onSelect={(currentValue) => {
-                                        setValue(currentValue === value ? "" : currentValue)
+                                        const selectedFont = options.find(item => item.className === currentValue)
+                                        if (selectedFont) {
+                                            setValue(selectedFont)
+                                        }
                                         setOpen(false)
                                     }}
                                 >
                                     <CheckIcon
                                         className={cn(
                                             "mr-2 h-4 w-4",
-                                            value === option.value ? "opacity-100" : "opacity-0"
+                                            value.className === option.className ? "opacity-100" : "opacity-0"
                                         )}
                                     />
                                     {option.label}
