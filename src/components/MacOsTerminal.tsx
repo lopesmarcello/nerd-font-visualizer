@@ -8,7 +8,7 @@ const MacOSTerminal = ({ fontClassName }: Props) => {
 
 
     return (
-        <div className={`w-full max-w-3xl mx-auto py-4 ${fontClassName}`}>
+        <div className={`w-full max-w-3xl mx-auto py-4 ${fontClassName} px-4 md:px-0`}>
             {/* Terminal Window */}
             <div className="rounded-lg shadow-2xl overflow-hidden bg-zinc-900 border border-zinc-700">
                 {/* Terminal Header */}
